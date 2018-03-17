@@ -24,5 +24,5 @@ services:
       - ./jupyter/work/:/home/jovyan/work/
     ports:
       - '24000:8888'
-    command: bash -c "rm /home/jovyan/.cache/matplotlib/fontList.py3k.cache && start-notebook.sh --NotebookApp.token='kgps8fsa24fff'"
+    command: bash -c "start-notebook.sh --NotebookApp.token='kgps8fsa24fff'"
     restart: always

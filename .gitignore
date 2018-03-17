@@ -2,3 +2,7 @@
 sql/*
 misc/data/*
 !.gitkeep
+dtb_*
+geo*
+mtb_*
+__pycache__

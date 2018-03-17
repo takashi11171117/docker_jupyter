@@ -1,2 +1,8 @@
 pymysql
 pyyaml
+coincheck
+bitflyer
+cryptowatch
+lxml
+html5lib
+pandas-highcharts
