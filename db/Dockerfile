@@ -1,4 +1,4 @@
-FROM mysql
+FROM mysql:5.7
 
 RUN apt-get update && \
     apt-get install -y locales && \
@@ -11,6 +11,7 @@ RUN { \
     echo '[mysqld]'; \
     echo 'character-set-server=utf8mb4'; \
     echo 'collation-server=utf8mb4_general_ci'; \
+    echo 'sql_mode = NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION'; \
     echo '[client]'; \
     echo 'default-character-set=utf8mb4'; \
 } > /etc/mysql/conf.d/charset.cnf
